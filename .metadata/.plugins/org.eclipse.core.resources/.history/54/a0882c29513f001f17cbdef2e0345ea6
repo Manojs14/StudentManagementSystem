@@ -1,0 +1,54 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<html>
+<head>
+    <title>Display Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .actions {
+            white-space: nowrap;
+             background-color: #f1f1f1; 
+        }
+    </style>
+</head>
+<body>
+<%System.out.println("Firest line iif list.jsp"); %>
+    <h2>Student Data from Database</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+             <c:forEach var="row" items="${data}">
+                <tr>
+                    <td>${row.id}</td>
+                    <td>${row.name}</td>
+                    <td>${row.email}</td>
+                    <td>${row.age}</td>
+                    <td class="actions">
+                        <button class="Edit" >Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+            </c:forEach>
+        </tbody>
+    </table>
+</body>
+</html>

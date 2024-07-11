@@ -1,0 +1,61 @@
+package com.servlet;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/CreateServlet")
+public class CreateServlet extends HttpServlet {
+	Connection con = null;
+	PreparedStatement pst = null;
+	ResultSet rs = null;
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String name = request.getParameter("name");	
+		String email = request.getParameter("email");
+		String agestud = request.getParameter("age");
+		int age =Integer.parseInt(agestud);
+		System.out.println(email+" "+name + " " +age);
+
+		
+
+		try {
+			// Load the JDBC driver
+			System.out.println("hello");
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("loaded");
+
+			// Establish connection
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/memories?useSSL=false", "root", "Manu2341");
+			System.out.println("conected");
+			System.out.println("line 47 in addposthand.jsp");
+
+			// Insert the into database
+			String query1 = "INSERT INTO memory (`email`, `creator`, `title`, `hastag`,`message`,`image`) VALUES (?,?, ?, ?, ?,?)";
+			System.out.println("line 59 in addposthand.jsp");
+			pst = con.prepareStatement(query1);
+			System.out.println("line 54 in addposthand.jsp");
+			pst.setString(1, email);
+			System.out.println("line 57 in addposthand.jsp");
+			pst.setString(2, name);
+			pst.setString(3, title);
+			System.out.println("line 59 in addposthand.jsp");
+			pst.setString(4, hastag);
+			System.out.println("line 62 in addposthand.jsp");
+			pst.setString(5, message);
+			pst.setBlob(6, img.getInputStream());
+
+			int result = pst.executeUpdate();
+			System.out.println("the result in addposthand.jsp   " + result);
+			System.out.println("Hellllllllllllllllllllooooooooooooo");
+			
+			if(result>0) {
+	}
+
+}

@@ -1,0 +1,172 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" %>
+    <%@ page import="java.sql.*, java.io.*, java.util.Properties" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+	crossorigin="anonymous">
+	<style>
+	body {
+    margin: 0;
+    font-family: Arial,sans-serif;
+    background-image: url('image/keith-misner-h0Vxgz5tyXA-unsplash.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    height: 100vh; 
+}
+
+.top-bar {
+	font-family:  fantasy;
+    background-color: #ffffff; 
+    color: 000080;
+    padding: 14px 20px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: calc(100% - 40px); 
+    top: 10px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+.bottom-bar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#a0a0a0 ;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    z-index: 1000;
+}
+	.content {
+    padding: 20px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+	
+	</style>
+</head>
+<body>
+
+
+
+<!--for top bar -->
+<div class="top-bar">
+        <div class="title">Memories <img alt="memories" src="image/photo.png" style="width:40px ; height:40px"></div>
+ </div>
+ <div class="content">
+    </div>
+ 
+<% 
+	String status=request.getparameter("status");
+	if(status!=null && status=="success") {
+	%>
+	<div id="notification" class="alert alert-success fade show"
+		role="alert"></div>
+	<script>
+        // Trigger the showNotification function onload
+        document.addEventListener('DOMContentLoaded', function() {
+            showNotification();
+        });
+
+        function showNotification() {
+            var notification = document.getElementById('notification');
+            notification.innerHTML = 'Uploaded Successfully';
+            
+            // Add the "show" class to display the alert
+            notification.classList.add('show');
+
+            // After 3 seconds, hide the alert using Bootstrap's "hide" class
+            setTimeout(function() {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+    	</script>
+	<% 
+	} else {
+		%>
+	<div id="notification" class="alert alert-danger fade show"
+		role="alert"></div>
+	<script>
+       // Trigger the showNotification function onload
+       document.addEventListener('DOMContentLoaded', function() {
+           showNotification();
+       });
+
+       function showNotification() {
+           var notification = document.getElementById('notification');
+           notification.innerHTML = 'Could not upload , Try Again...!';
+           
+           // Add the "show" class to display the alert
+           notification.classList.add('show');
+
+           // After 3 seconds, hide the alert using Bootstrap's "hide" class
+           setTimeout(function() {
+               notification.classList.remove('show');
+           }, 3000);
+       }
+   	</script>
+   
+   	
+   	
+   	
+<% 
+	}
+//retrieve the data from the session
+System.out.println("line 12 of h.jsp");
+session=request.getSession();
+String email=(String)session.getAttribute("useremail");
+boolean islogin= (boolean)session.getAttribute("isLoggedIn");
+System.out.println(email+" "+islogin);
+
+%>
+<!-- Redirecting session -->
+<script type="text/javascript">
+		var email="<%=email%>";
+		
+        function redirectToAddPage() {
+            window.location.href = 'setsession.jsp?email='+encodeURIComponent(email);
+        }
+   
+        function logout() {
+            window.location.href = 'login.jsp';
+        }
+	function gotohome(){
+		window.location.href='home.jsp?email=' +  encodeURIComponent(email);
+	}
+</script>
+	
+	<!-- For bottom bar -->
+<div class="bottom-bar">
+        <div class="title" style="gap:50px; align-items:center;">  <img alt="Home" src="image/round.png" style="width:50px; padding-right:15px;" onclick="gotohome()"> <img alt="Add post" src="image/add.png" style="width:50px;" onclick="redirectToAddPage()" onmouseover=" ">      <img alt="Home" src="image/user.png" style="width:50px;padding-left:15px" > <img alt="Home" src="image/logout.png" style="width:50px;padding-left:15px" onclick="logout()"; > </div>
+         
+ </div>
+</body>
+<script
+	src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+	integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+	integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+	crossorigin="anonymous"></script>
+</html>

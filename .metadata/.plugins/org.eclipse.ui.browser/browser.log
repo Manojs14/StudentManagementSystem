@@ -1,0 +1,43 @@
+
+Jun 19, 2024 17:46:36.53 NEW SESSION
+Jun 19, 2024 17:46:36.54 [18732:3796:0619/174636.532:ERROR:login_database.cc(1022)] Unable to open the password store database.
+Jun 19, 2024 17:46:36.54 [18732:3796:0619/174636.532:ERROR:login_database_async_helper.cc(66)] Could not create/open login database.
+Jun 19, 2024 17:46:37.38 [18732:5432:0619/174637.384:ERROR:password_sync_bridge.cc(329)] Passwords datatype error was encountered: Password metadata store isn't available.
+Jun 19, 2024 17:46:37.39 [18732:5432:0619/174637.391:ERROR:data_type_manager_impl.cc(405)] Passwords datatype error was encountered: Preexisting controller error on configuration
+Jun 19, 2024 17:46:38.27 Created TensorFlow Lite XNNPACK delegate for CPU.
+Jun 19, 2024 17:47:55.41 [18732:5432:0619/174755.412:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+Jun 19, 2024 17:56:28.54 [18732:5432:0619/175628.542:ERROR:interface_endpoint_client.cc(722)] Message 0 rejected by interface blink.mojom.WidgetHost
+Jun 19, 2024 19:04:34.09 [18732:5432:0619/190434.092:ERROR:device_event_log_impl.cc(196)] [19:04:34.091] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Jun 19, 2024 19:33:29.85 [18732:5432:0619/193329.855:ERROR:device_event_log_impl.cc(196)] [19:33:29.855] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Jun 19, 2024 19:33:35.52 [18732:5432:0619/193335.526:ERROR:device_event_log_impl.cc(196)] [19:33:35.525] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Jun 19, 2024 19:55:25.67 [18732:5432:0619/195525.672:ERROR:interface_endpoint_client.cc(722)] Message 0 rejected by interface blink.mojom.WidgetHost
+Jun 19, 2024 20:35:02.79 [18732:2020:0619/203502.797:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+Jun 19, 2024 20:51:16.68 [18732:2020:0619/205116.681:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Jun 19, 2024 22:13:00.58 [18732:2020:0619/221300.579:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+Jun 19, 2024 23:09:51.08 [18732:2020:0619/230951.086:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+Jun 19, 2024 23:09:53.54 [18732:2020:0619/230953.544:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Jun 19, 2024 23:23:14.56 [18732:2020:0619/232314.560:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+Jun 20, 2024 02:23:14.60 [18732:2020:0620/022314.604:ERROR:connection_factory_impl.cc(483)] ConnectionHandler failed with net error: -2
+
+Jun 29, 2024 19:02:19.50 NEW SESSION
+Jun 29, 2024 19:02:19.53 [16572:20152:0629/190219.495:ERROR:login_database.cc(1022)] Unable to open the password store database.
+Jun 29, 2024 19:02:19.53 [16572:20152:0629/190219.495:ERROR:login_database_async_helper.cc(66)] Could not create/open login database.
+Jun 29, 2024 19:02:22.55 Created TensorFlow Lite XNNPACK delegate for CPU.
+Jun 29, 2024 19:02:22.68 [16572:19820:0629/190222.687:ERROR:password_sync_bridge.cc(329)] Passwords datatype error was encountered: Password metadata store isn't available.
+Jun 29, 2024 19:02:22.69 [16572:19820:0629/190222.694:ERROR:data_type_manager_impl.cc(405)] Passwords datatype error was encountered: Preexisting controller error on configuration
+Jun 29, 2024 19:02:53.17 [16572:19820:0629/190253.172:ERROR:account_info_fetcher.cc(62)] OnGetTokenFailure: Connection failed (-106).
+Jun 29, 2024 19:02:54.13 [16572:19820:0629/190254.131:ERROR:account_info_fetcher.cc(62)] OnGetTokenFailure: Connection failed (-106).
+Jun 29, 2024 19:07:53.20 [16572:21592:0629/190753.201:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Jun 30, 2024 10:33:37.49 [17292:16576:0630/103337.489:ERROR:login_database.cc(1022)] Unable to open the password store database.
+Jun 30, 2024 10:33:37.49 [17292:16576:0630/103337.489:ERROR:login_database_async_helper.cc(66)] Could not create/open login database.
+Jun 30, 2024 10:33:41.22 [17292:10464:0630/103341.225:ERROR:password_sync_bridge.cc(329)] Passwords datatype error was encountered: Password metadata store isn't available.
+Jun 30, 2024 10:33:41.23 [17292:10464:0630/103341.229:ERROR:data_type_manager_impl.cc(405)] Passwords datatype error was encountered: Preexisting controller error on configuration
+Jun 30, 2024 10:33:43.84 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+Jul 11, 2024 08:40:29.03 NEW SESSION
+Jul 11, 2024 08:40:29.09 [3264:8464:0711/084028.999:ERROR:login_database.cc(1022)] Unable to open the password store database.
+Jul 11, 2024 08:40:29.10 [3264:8464:0711/084028.999:ERROR:login_database_async_helper.cc(66)] Could not create/open login database.
+Jul 11, 2024 08:40:31.41 [3264:7584:0711/084031.413:ERROR:password_sync_bridge.cc(329)] Passwords datatype error was encountered: Password metadata store isn't available.
+Jul 11, 2024 08:40:31.44 [3264:7584:0711/084031.440:ERROR:data_type_manager_impl.cc(405)] Passwords datatype error was encountered: Preexisting controller error on configuration
+Jul 11, 2024 08:40:33.05 Created TensorFlow Lite XNNPACK delegate for CPU.
+Jul 11, 2024 08:50:53.73 [3264:7584:0711/085053.735:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost

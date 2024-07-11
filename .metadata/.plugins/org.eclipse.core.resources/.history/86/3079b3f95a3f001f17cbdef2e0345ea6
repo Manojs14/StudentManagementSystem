@@ -1,0 +1,31 @@
+package com.servlet;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class UpdateServlet
+ */
+@WebServlet("/UpdateServlet")
+public class UpdateServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		String sid = request.getParameter("id"); 
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+		String sage = request.getParameter("age");
+		int id= Integer.parseInt(sid);
+		int age= Integer.parseInt(sage);
+		System.out.println("the id in updateservlet is "+name+ " "+ email +" "+id+ " "+age);
+		
+		
+		
+		
+	}
+
+}

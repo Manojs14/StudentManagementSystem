@@ -1,0 +1,51 @@
+
+<%@page import="java.net.URLEncoder"%>
+<%@page import="java.util.Base64"%>
+<%@ page import="java.sql.*, java.io.*" %>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.io.PrintWriter"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.util.Properties"%>
+<%@page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+FileInputStream fis= null;
+Properties p=null;
+Connection con = null;
+PreparedStatement pst = null;
+
+
+try {
+	
+	//load the properties from properties file using file input stream
+	fis =new FileInputStream("C:\\Users\\91974\\OneDrive\\Desktop\\tap assignment\\Crud_form\\src\\main\\java\\com\\servlet\\utilities\\dbdetails.properties");
+	p= new Properties();
+	p.load(fis);
+	String url= p.getProperty("url");
+	String username=p.getProperty("un");
+	String password= p.getProperty("pass");
+	
+	// Load the JDBC driver
+	System.out.println("hello");
+	Class.forName("com.mysql.cj.jdbc.Driver");
+	System.out.println("loaded");
+
+	// Establish connection
+	con = DriverManager.getConnection(url, username, password);
+	System.out.println("connected");
+	
+}
+
+%>
+</body>
+</html>

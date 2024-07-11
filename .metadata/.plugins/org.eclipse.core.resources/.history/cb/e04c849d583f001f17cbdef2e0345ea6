@@ -1,0 +1,66 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+hello
+<% String id = request.getParameter("id"); 
+String name = request.getParameter("name");
+String email = request.getParameter("email");
+String sage = request.getParameter("age");
+System.out.println("the id is "+id);
+%>
+
+<!-- nav bar to navigate from addpage to viewpage -->
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+		<div class="container-fluid">
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="index.jsp">AddStudent</a></li>
+					<li class="nav-item"><a class="nav-link" href="ReadServlet">ViewStudents</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	
+	
+	
+<!-- Form which uses bootstrap rows and colm for form placement -->
+ <div class="row">
+    <div class="col-4">
+    </div>
+    <div class="col-4" style="padding:50px">
+        <h1 style="">Update Student</h1>
+     <form action="UpdateServlet" method="post">
+  <div class="mb-3">
+    <label for="username" class="form-label">Name </label>
+    <input type="text" class="form-control" id="name1" name="name" aria-describedby="text" placeholder="Enter The Student's Name" required>
+  </div>
+   <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" name="email" required id="email" aria-describedby="emailHelp" placeholder="Enter The Email Address" required>
+  </div>
+  <div class="mb-3">
+    <label for="number" class="form-label">Age</label>
+    <input type="number" class="form-control" name="age" required id="age" placeholder="Enter The age" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div> 
+</div> 
+
+
+
+
+
+
+</body>
+</html>
