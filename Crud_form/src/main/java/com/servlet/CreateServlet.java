@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/CreateServlet")
+
 public class CreateServlet extends HttpServlet {
 	
 	FileInputStream fis= null;
@@ -68,7 +68,7 @@ public class CreateServlet extends HttpServlet {
 			
 			//if result is >0 request is forworded to readservlet
 			if (result >0) {
-				request.getRequestDispatcher("/ReadServlet").forward(request, response);
+				request.getRequestDispatcher("ReadServlet").forward(request, response);
 			}
 			
 			

@@ -41,3 +41,11 @@ Jul 11, 2024 08:40:31.41 [3264:7584:0711/084031.413:ERROR:password_sync_bridge.c
 Jul 11, 2024 08:40:31.44 [3264:7584:0711/084031.440:ERROR:data_type_manager_impl.cc(405)] Passwords datatype error was encountered: Preexisting controller error on configuration
 Jul 11, 2024 08:40:33.05 Created TensorFlow Lite XNNPACK delegate for CPU.
 Jul 11, 2024 08:50:53.73 [3264:7584:0711/085053.735:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+Jul 19, 2024 18:09:59.99 NEW SESSION
+Jul 19, 2024 18:10:00.01 [21360:22120:0719/180959.996:ERROR:login_database.cc(1022)] Unable to open the password store database.
+Jul 19, 2024 18:10:00.01 [21360:22120:0719/180959.996:ERROR:login_database_async_helper.cc(66)] Could not create/open login database.
+Jul 19, 2024 18:10:01.89 [21360:21384:0719/181001.898:ERROR:password_sync_bridge.cc(329)] Passwords datatype error was encountered: Password metadata store isn't available.
+Jul 19, 2024 18:10:01.90 [21360:21384:0719/181001.905:ERROR:data_type_manager_impl.cc(405)] Passwords datatype error was encountered: Preexisting controller error on configuration
+Jul 19, 2024 18:10:02.97 Created TensorFlow Lite XNNPACK delegate for CPU.
+Jul 19, 2024 18:10:32.34 [21360:21384:0719/181032.342:ERROR:interface_endpoint_client.cc(722)] Message 1 rejected by interface blink.mojom.WidgetHost

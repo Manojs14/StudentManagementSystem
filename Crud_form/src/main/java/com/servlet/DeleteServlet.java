@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 
 
 
-@WebServlet("/DeleteServlet")
 public class DeleteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	FileInputStream fis= null;
