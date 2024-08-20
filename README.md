@@ -1,44 +1,39 @@
+# Student Management System
 
-Technologies Used
-Java EE (Enterprise Edition)
-Servlets
-JSP pages
-JDBC (Java Database Connectivity)
-MySQL (as the database)
-HTML/CSS/JavaScript (for front-end interaction)
+## Technologies Used
+- **Java EE (Enterprise Edition)**
+- **Servlets**
+- **JSP Pages**
+- **JDBC (Java Database Connectivity)**
+- **MySQL** (as the database)
+- **HTML/CSS/JavaScript** (for front-end interaction)
 
+## Set Up the Database
+1. **Create the Schema**: Create a MySQL database named `student_db`.
+2. **Create the Table**: The `students` table should include the following columns:
+   - `id`: Integer
+   - `name`: Varchar
+   - `email`: Varchar
+   - `age`: Integer
+3. **Import Data**: Import the `students.sql` file located in the `database` directory to set up the necessary table and sample data.
 
-=======
-# StudentManagementSystem
->>>>>>> origin/main
+## Project Requirements
+- **Dynamic Web Project**: Version 4.0
+- **Server**: Apache Tomcat 9.0
 
+## Configure Database Details
+1. Navigate to the `dbdetails.properties` file located in `src/main/java/com/servlet/utilities/`.
+2. Update the file with your MySQL database URL, username, and password.
 
+## Run the Application
+1. Deploy the application to a Java EE-compatible server (e.g., Apache Tomcat).
+   - **Note**: The server used is Apache Tomcat 9. You may encounter errors during deployment, but they can be resolved using Tomcat version 9.
+2. Access the application through a browser using the server's URL.
 
-Set up the database:
-schema named student_db.
-Create a MySQL database named students.
-students contains colm id, name, email, age.
-Import the students.sql file located in the database directory to set up the necessary table and sample data.
+## Working
+The Student Management System project allows users to input and store student details in a database. It supports CRUD operations (Create, Read, Update, Delete) on the stored data. 
 
-use dynamic web project 4.0
-use the tomcat server 9.0
-
-
-Configure database details:
-Update dbdetails.properties file located in src/main/java/com/servlet/utilities/ with your MySQL database URL, username, and password.
-
-
-Run the application:
-Deploy the application to a Java EE compatible server (e.g., Apache Tomcat).
-the server used is  apache tomcat 9;
-it will show the error but can be compiled using tomcat 9 version.
-Access the application through the browser using the server's URL.
-
-Working:
-This Student Management System project allows users to input and store student details in a database.
-It supports CRUD operations (Create, Read, Update, Delete) on the stored data. 
-The project features a navigation bar for easy access to different pages. 
-The "View_Student" section displays the stored data, along with options to edit or delete entries.
-The "Add_Student" section displays the form upon successfull submission the data will get stored in db.
-
+- **Navigation Bar**: Provides easy access to different sections of the application.
+- **View_Student**: Displays the stored data with options to edit or delete entries.
+- **Add_Student**: Displays a form to add new student details, which will be stored in the database upon successful submission.
 
